@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+class Employee {
+    private String name;
+    private double salary;
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setSalary(double salary) {
+        if (salary > 0) {   
+            this.salary = salary;
+        }
+    }
+    public String getName() {
+        return name;
+    }
+    public double getSalary() {
+        return salary;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Employee e1 = new Employee();
+        System.out.print("Enter Employee Name: ");
+        String n = sc.nextLine();
+        System.out.print("Enter Salary: ");
+        double s = sc.nextDouble();
+        e1.setName(n);
+        e1.setSalary(s);
+        System.out.println("\n--- Employee Details ---");
+        System.out.println("Name   : " + e1.getName());
+        System.out.println("Salary : " + e1.getSalary());
+    }
+}
